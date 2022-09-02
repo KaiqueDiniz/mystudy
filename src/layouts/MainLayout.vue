@@ -11,15 +11,13 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>Quasar CLI with Vite App</q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>Meu site</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header>Essential Links</q-item-label>
+        <q-item-label header>MENU</q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -41,16 +39,16 @@ import EssentialLink from 'components/EssentialLink.vue';
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
+    title: 'Resgistre-se',
+    caption: 'Área de registro',
+    icon: 'app_registration',
+    link: '/register',
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
+    caption: 'Repositório de códigos',
     icon: 'code',
-    link: 'https://github.com/quasarframework',
+    link: 'https://github.com/KaiqueDiniz',
   },
   {
     title: 'Discord Chat Channel',

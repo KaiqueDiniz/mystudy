@@ -2,12 +2,14 @@
   <q-page>
     <div class="flex flex-center calculator column">
       <h4>Calculadora</h4>
-      <q-input v-model="firstNumber" label="Adicione um número"></q-input>
-      <q-input v-model="secondNumber" label="Adicione outro número"></q-input>
-      <q-btn class="button" @click="sum()" label="Somar"></q-btn>
-      <q-btn class="button" @click="multiply()" label="Multiplicar"></q-btn>
-      <q-btn class="button" @click="subtract()" label="Subtrair"></q-btn>
-      <q-btn class="button" @click="divide()" label="Dividir"></q-btn>
+      <div class="column wd-300">
+        <q-input v-model="firstNumber" label="Adicione um número"></q-input>
+        <q-input v-model="secondNumber" label="Adicione outro número"></q-input>
+        <q-btn @click="sum()" label="Somar"></q-btn>
+        <q-btn @click="multiply()" label="Multiplicar"></q-btn>
+        <q-btn @click="subtract()" label="Subtrair"></q-btn>
+        <q-btn @click="divide()" label="Dividir"></q-btn>
+      </div>
       <span>O resultado é {{ result }}</span>
     </div>
   </q-page>
@@ -17,9 +19,9 @@
 import { ref } from 'vue';
 export default {
   setup() {
-    const firstNumber = ref();
-    const secondNumber = ref();
-    const result = ref(Number());
+    const firstNumber = ref('');
+    const secondNumber = ref('');
+    const result = ref('');
 
     return {
       firstNumber,
